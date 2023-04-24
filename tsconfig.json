@@ -1,4 +1,4 @@
 {
-  "ts-node": { "compilerOptions": { "experimentalDecorators": true } },
-  "compilerOptions": {"outDir": "dist"}
+  "ts-node": { },
+  "compilerOptions": {"outDir": "dist", "experimentalDecorators": true},
 }

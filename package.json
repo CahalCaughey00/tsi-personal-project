@@ -4,7 +4,7 @@
   "description": "Personal project for Testing & Software Improvement",
   "main": "dist/index.js",
   "scripts": {
-    "test": "tsc --no-emit && jest",
+    "test": "tsc noEmit && jest",
     "build": "rm -rf dist && tsc"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
-    "@types/sqlite3": "^3.1.8"
+    "@types/sqlite3": "^3.1.8",
+    "typescript": "^4.9.4"
   }
 }

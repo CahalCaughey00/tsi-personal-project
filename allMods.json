@@ -1,0 +1,1500 @@
+{
+  "installedAddons": [
+    {
+      "instanceID": "21e05eed-e486-4fe0-8a41-dead88092988",
+      "modSource": 0,
+      "addonID": 372124,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "Phosphor (Fabric)",
+      "authors": [{ "Name": "jellysquid3_" }],
+      "primaryAuthor": "jellysquid3_",
+      "primaryCategoryId": 425,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/phosphor",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/284/775/256/256/637298471783289760.png",
+      "tags": [],
+      "installedFile": {
+        "id": 3832074,
+        "fileName": "phosphor-fabric-mc1.19.x-0.8.1.jar",
+        "fileDate": "2022-06-14T15:20:42.047Z",
+        "fileLength": 88018,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/3832/74/phosphor-fabric-mc1.19.x-0.8.1.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [{ "addonId": 360438, "type": 2 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 2490642089,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "LICENSE.txt",
+            "fingerprint": 1136524626,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 3917331610,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 1170578422,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "phosphor.accesswidener",
+            "fingerprint": 1204799702,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "phosphor.mixins.json",
+            "fingerprint": 959457470,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.phosphor.refmap.json",
+            "fingerprint": 3291403689,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "net",
+            "fingerprint": 719350116,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1712995981,
+        "gameVersion": ["1.19.3", "Fabric", "1.19.2", "1.19.1", "1.19"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 372124,
+        "FileNameOnDisk": "phosphor-fabric-mc1.19.x-0.8.1.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T11:35:52.499173Z",
+      "dateUpdated": "2022-12-12T11:35:52.499173Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 5,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 3832074,
+        "fileName": "phosphor-fabric-mc1.19.x-0.8.1.jar",
+        "fileDate": "2022-06-14T15:20:42.047Z",
+        "fileLength": 88018,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/3832/74/phosphor-fabric-mc1.19.x-0.8.1.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [{ "addonId": 360438, "type": 2 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 2490642089,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "LICENSE.txt",
+            "fingerprint": 1136524626,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 3917331610,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 1170578422,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "phosphor.accesswidener",
+            "fingerprint": 1204799702,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "phosphor.mixins.json",
+            "fingerprint": 959457470,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.phosphor.refmap.json",
+            "fingerprint": 3291403689,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "net",
+            "fingerprint": 719350116,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1712995981,
+        "gameVersion": ["1.19.3", "Fabric", "1.19.2", "1.19.1", "1.19"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 372124,
+        "FileNameOnDisk": "phosphor-fabric-mc1.19.x-0.8.1.jar",
+        "Hashes": []
+      }
+    },
+    {
+      "instanceID": "a7b34b73-4bd5-49d0-b177-6c4e7e8e1f64",
+      "modSource": 0,
+      "addonID": 455508,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "Iris Shaders",
+      "authors": [{ "Name": "coderbot" }, { "Name": "IMS21" }],
+      "primaryAuthor": "coderbot",
+      "primaryCategoryId": 425,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/640/757/256/256/638042285668346158.jpeg",
+      "tags": [],
+      "installedFile": {
+        "id": 4143801,
+        "fileName": "iris-mc1.19.2-1.4.5.jar",
+        "fileDate": "2022-12-07T21:28:33.257Z",
+        "fileLength": 2632361,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4143/801/iris-mc1.19.2-1.4.5.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [{ "addonId": 394468, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 136101126,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 4172173677,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "centerDepth.fsh",
+            "fingerprint": 1579026811,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "centerDepth.vsh",
+            "fingerprint": 462961270,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "de",
+            "fingerprint": 1526878593,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 1597384425,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "iris-batched-entity-rendering.mixins.json",
+            "fingerprint": 2591179902,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "iris-refmap.json",
+            "fingerprint": 3299653399,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "iris.accesswidener",
+            "fingerprint": 3097229464,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "kroppeb",
+            "fingerprint": 2534316967,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.bettermipmaps.json",
+            "fingerprint": 1853408289,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.compat.indigo.json",
+            "fingerprint": 3417859026,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.compat.indium.json",
+            "fingerprint": 324187179,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.compat.sodium.json",
+            "fingerprint": 3869633225,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.devenvironment.json",
+            "fingerprint": 1185611938,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.fantastic.json",
+            "fingerprint": 1404281913,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.fixes.maxfpscrash.json",
+            "fingerprint": 2786119635,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.integrationtest.json",
+            "fingerprint": 4038426548,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.json",
+            "fingerprint": 329007804,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.optimized-stitching.json",
+            "fingerprint": 4040851691,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.vertexformat.json",
+            "fingerprint": 3184519667,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "net",
+            "fingerprint": 3885845664,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1820304383,
+        "gameVersion": ["Fabric", "1.19.2", "Quilt"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Quilt",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 455508,
+        "FileNameOnDisk": "iris-mc1.19.2-1.4.5.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T11:35:53.083935Z",
+      "dateUpdated": "2022-12-12T11:35:53.083935Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 5,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4143801,
+        "fileName": "iris-mc1.19.2-1.4.5.jar",
+        "fileDate": "2022-12-07T21:28:33.257Z",
+        "fileLength": 2632361,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4143/801/iris-mc1.19.2-1.4.5.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [{ "addonId": 394468, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 136101126,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 4172173677,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "centerDepth.fsh",
+            "fingerprint": 1579026811,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "centerDepth.vsh",
+            "fingerprint": 462961270,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "de",
+            "fingerprint": 1526878593,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 1597384425,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "iris-batched-entity-rendering.mixins.json",
+            "fingerprint": 2591179902,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "iris-refmap.json",
+            "fingerprint": 3299653399,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "iris.accesswidener",
+            "fingerprint": 3097229464,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "kroppeb",
+            "fingerprint": 2534316967,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.bettermipmaps.json",
+            "fingerprint": 1853408289,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.compat.indigo.json",
+            "fingerprint": 3417859026,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.compat.indium.json",
+            "fingerprint": 324187179,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.compat.sodium.json",
+            "fingerprint": 3869633225,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.devenvironment.json",
+            "fingerprint": 1185611938,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.fantastic.json",
+            "fingerprint": 1404281913,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.fixes.maxfpscrash.json",
+            "fingerprint": 2786119635,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.integrationtest.json",
+            "fingerprint": 4038426548,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.json",
+            "fingerprint": 329007804,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.optimized-stitching.json",
+            "fingerprint": 4040851691,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.iris.vertexformat.json",
+            "fingerprint": 3184519667,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "net",
+            "fingerprint": 3885845664,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1820304383,
+        "gameVersion": ["Fabric", "1.19.2", "Quilt"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Quilt",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 455508,
+        "FileNameOnDisk": "iris-mc1.19.2-1.4.5.jar",
+        "Hashes": []
+      }
+    },
+    {
+      "instanceID": "ac6118cb-5d83-4558-8a7d-7d466b17ea50",
+      "modSource": 0,
+      "addonID": 306612,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "Fabric API",
+      "authors": [{ "Name": "modmuss50" }, { "Name": "sfPlayer1" }],
+      "primaryAuthor": "modmuss50",
+      "primaryCategoryId": 421,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/fabric-api",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/185/822/256/256/636829723898798601.png",
+      "tags": [],
+      "installedFile": {
+        "id": 4123950,
+        "fileName": "fabric-api-0.68.0+1.19.2.jar",
+        "fileDate": "2022-11-29T18:43:37.613Z",
+        "fileLength": 1820290,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4123/950/fabric-api-0.68.0+1.19.2.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 4258442015,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "LICENSE-fabric-api",
+            "fingerprint": 3574284957,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 860504683,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 3098536320,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 2070795953,
+        "gameVersion": ["Fabric", "1.19.2"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 306612,
+        "FileNameOnDisk": "fabric-api-0.68.0+1.19.2.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T12:38:01.016175Z",
+      "dateUpdated": "2022-12-12T12:38:01.016175Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 3,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4162908,
+        "fileName": "fabric-api-0.69.0+1.19.2.jar",
+        "fileDate": "2022-12-11T15:49:26.323Z",
+        "fileLength": 1822053,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4162/908/fabric-api-0.69.0+1.19.2.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 4180609771,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "LICENSE-fabric-api",
+            "fingerprint": 3574284957,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 860504683,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 2050157495,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1937619149,
+        "gameVersion": ["Fabric", "1.19.2"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 306612,
+        "FileNameOnDisk": "fabric-api-0.69.0+1.19.2.jar",
+        "Hashes": []
+      }
+    },
+    {
+      "instanceID": "1b1df015-43aa-4c20-8d4e-843a03a5fca0",
+      "modSource": 0,
+      "addonID": 488090,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "MidnightLib",
+      "authors": [{ "Name": "TeamMidnightDust" }, { "Name": "Motschen" }],
+      "primaryAuthor": "TeamMidnightDust",
+      "primaryCategoryId": 421,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/midnightlib",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/388/582/256/256/637580663642837174.png",
+      "tags": [],
+      "installedFile": {
+        "id": 4059589,
+        "fileName": "midnightlib-fabric-1.0.0.jar",
+        "fileDate": "2022-10-31T09:59:05.63Z",
+        "fileLength": 66328,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4059/589/midnightlib-fabric-1.0.0.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [
+          { "addonId": 306612, "type": 3 },
+          { "addonId": 308702, "type": 2 }
+        ],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 1754339360,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightlib.mixins.json",
+            "fingerprint": 3805488534,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2250991448,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightlib-common-refmap.json",
+            "fingerprint": 4212348977,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 547280580,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "eu",
+            "fingerprint": 2088240343,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1626674378,
+        "gameVersion": ["Fabric", "1.19.2", "1.19.1", "1.19"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 488090,
+        "FileNameOnDisk": "midnightlib-fabric-1.0.0.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T11:35:52.524532Z",
+      "dateUpdated": "2022-12-12T11:35:52.524532Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 5,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4059589,
+        "fileName": "midnightlib-fabric-1.0.0.jar",
+        "fileDate": "2022-10-31T09:59:05.63Z",
+        "fileLength": 66328,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4059/589/midnightlib-fabric-1.0.0.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [
+          { "addonId": 306612, "type": 3 },
+          { "addonId": 308702, "type": 2 }
+        ],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 1754339360,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightlib.mixins.json",
+            "fingerprint": 3805488534,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2250991448,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightlib-common-refmap.json",
+            "fingerprint": 4212348977,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 547280580,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "eu",
+            "fingerprint": 2088240343,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1626674378,
+        "gameVersion": ["Fabric", "1.19.2", "1.19.1", "1.19"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 488090,
+        "FileNameOnDisk": "midnightlib-fabric-1.0.0.jar",
+        "Hashes": []
+      }
+    },
+    {
+      "instanceID": "1c5569a2-508f-4042-a0fe-107f6ac6b145",
+      "modSource": 0,
+      "addonID": 394468,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "Sodium",
+      "authors": [{ "Name": "jellysquid3_" }],
+      "primaryAuthor": "jellysquid3_",
+      "primaryCategoryId": 425,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/sodium",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/284/773/256/256/637298471098686391.png",
+      "tags": [],
+      "installedFile": {
+        "id": 3957319,
+        "fileName": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+        "fileDate": "2022-08-29T16:03:40.65Z",
+        "fileLength": 1372575,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/3957/319/sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [
+          { "addonId": 372124, "type": 2 },
+          { "addonId": 360438, "type": 2 }
+        ],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 1723379489,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "LICENSE.txt",
+            "fingerprint": 1136524626,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "sodium.accesswidener",
+            "fingerprint": 1744769279,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 2143486282,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "sodium.mixins.json",
+            "fingerprint": 564551425,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 3406733899,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.sodium.refmap.json",
+            "fingerprint": 1582425630,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "me",
+            "fingerprint": 1864081753,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 4235169426,
+        "gameVersion": ["Fabric", "1.19.2", "Quilt"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Quilt",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 394468,
+        "FileNameOnDisk": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T11:35:53.300024Z",
+      "dateUpdated": "2022-12-12T11:35:53.300024Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 5,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 3957319,
+        "fileName": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+        "fileDate": "2022-08-29T16:03:40.65Z",
+        "fileLength": 1372575,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/3957/319/sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [
+          { "addonId": 372124, "type": 2 },
+          { "addonId": 360438, "type": 2 }
+        ],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 1723379489,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "LICENSE.txt",
+            "fingerprint": 1136524626,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "sodium.accesswidener",
+            "fingerprint": 1744769279,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 2143486282,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "sodium.mixins.json",
+            "fingerprint": 564551425,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 3406733899,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.sodium.refmap.json",
+            "fingerprint": 1582425630,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "me",
+            "fingerprint": 1864081753,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 4235169426,
+        "gameVersion": ["Fabric", "1.19.2", "Quilt"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Quilt",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 394468,
+        "FileNameOnDisk": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+        "Hashes": []
+      }
+    },
+    {
+      "instanceID": "95a8df6e-f356-4921-b3c0-57f882134639",
+      "modSource": 0,
+      "addonID": 360438,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "Lithium (Fabric)",
+      "authors": [{ "Name": "jellysquid3_" }],
+      "primaryAuthor": "jellysquid3_",
+      "primaryCategoryId": 425,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/lithium",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/246/646/256/256/637158441743060329.png",
+      "tags": [],
+      "installedFile": {
+        "id": 4151762,
+        "fileName": "lithium-fabric-mc1.19.2-0.10.4.jar",
+        "fileDate": "2022-12-08T21:54:53.15Z",
+        "fileLength": 555137,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4151/762/lithium-fabric-mc1.19.2-0.10.4.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [
+          { "addonId": 394468, "type": 2 },
+          { "addonId": 372124, "type": 2 }
+        ],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "LICENSE.txt",
+            "fingerprint": 1136524626,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "META-INF",
+            "fingerprint": 705989954,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 1769415467,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 4163985599,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "lithium.accesswidener",
+            "fingerprint": 4208050492,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "lithium.mixins.json",
+            "fingerprint": 3344928311,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "me",
+            "fingerprint": 839183284,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.lithium.refmap.json",
+            "fingerprint": 1097497168,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1208467280,
+        "gameVersion": ["Fabric", "Client", "1.19.2", "Server"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Client",
+            "gameVersionTypeId": 75208
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Server",
+            "gameVersionTypeId": 75208
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 360438,
+        "FileNameOnDisk": "lithium-fabric-mc1.19.2-0.10.4.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T11:35:53.296846Z",
+      "dateUpdated": "2022-12-12T11:35:53.296846Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 5,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4151762,
+        "fileName": "lithium-fabric-mc1.19.2-0.10.4.jar",
+        "fileDate": "2022-12-08T21:54:53.15Z",
+        "fileLength": 555137,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4151/762/lithium-fabric-mc1.19.2-0.10.4.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [
+          { "addonId": 394468, "type": 2 },
+          { "addonId": 372124, "type": 2 }
+        ],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "LICENSE.txt",
+            "fingerprint": 1136524626,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "META-INF",
+            "fingerprint": 705989954,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 1769415467,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 4163985599,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "lithium.accesswidener",
+            "fingerprint": 4208050492,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "lithium.mixins.json",
+            "fingerprint": 3344928311,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "me",
+            "fingerprint": 839183284,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "mixins.lithium.refmap.json",
+            "fingerprint": 1097497168,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1208467280,
+        "gameVersion": ["Fabric", "Client", "1.19.2", "Server"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Client",
+            "gameVersionTypeId": 75208
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Server",
+            "gameVersionTypeId": 75208
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 360438,
+        "FileNameOnDisk": "lithium-fabric-mc1.19.2-0.10.4.jar",
+        "Hashes": []
+      }
+    },
+    {
+      "instanceID": "08a35fca-772e-45a0-87f4-22f2da790c1f",
+      "modSource": 0,
+      "addonID": 621768,
+      "gameID": 432,
+      "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+      "name": "MidnightControls",
+      "authors": [{ "Name": "Motschen" }],
+      "primaryAuthor": "Motschen",
+      "primaryCategoryId": 5191,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/midnightcontrols",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/544/470/256/256/637876240617173919.png",
+      "tags": [],
+      "installedFile": {
+        "id": 4054105,
+        "fileName": "midnightcontrols-1.7.1+1.19.jar",
+        "fileDate": "2022-10-27T19:42:48.887Z",
+        "fileLength": 545229,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4054/105/midnightcontrols-1.7.1+1.19.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [{ "addonId": 488090, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 1063061272,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols.mixins.json",
+            "fingerprint": 1294372130,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 3512820502,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols_compat.mixins.json",
+            "fingerprint": 1850405822,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "resourcepacks",
+            "fingerprint": 2202604849,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols.accesswidener",
+            "fingerprint": 2001777457,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2409878194,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols-refmap.json",
+            "fingerprint": 1875100338,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "eu",
+            "fingerprint": 132341714,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 2337251392,
+        "gameVersion": ["Fabric", "1.19.2", "1.19.1", "Quilt", "1.19"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Quilt",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 621768,
+        "FileNameOnDisk": "midnightcontrols-1.7.1+1.19.jar",
+        "Hashes": []
+      },
+      "dateInstalled": "2022-12-12T11:35:52.813417Z",
+      "dateUpdated": "2022-12-12T11:35:52.813417Z",
+      "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+      "status": 5,
+      "installSource": 0,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": false,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4054105,
+        "fileName": "midnightcontrols-1.7.1+1.19.jar",
+        "fileDate": "2022-10-27T19:42:48.887Z",
+        "fileLength": 545229,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4054/105/midnightcontrols-1.7.1+1.19.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "dependencies": [{ "addonId": 488090, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 1063061272,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols.mixins.json",
+            "fingerprint": 1294372130,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "fabric.mod.json",
+            "fingerprint": 3512820502,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols_compat.mixins.json",
+            "fingerprint": 1850405822,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "resourcepacks",
+            "fingerprint": 2202604849,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols.accesswidener",
+            "fingerprint": 2001777457,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2409878194,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "midnightcontrols-refmap.json",
+            "fingerprint": 1875100338,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "eu",
+            "fingerprint": 132341714,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 2337251392,
+        "gameVersion": ["Fabric", "1.19.2", "1.19.1", "Quilt", "1.19"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "",
+            "gameVersionName": "Fabric",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Quilt",
+            "gameVersionTypeId": 68441
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 621768,
+        "FileNameOnDisk": "midnightcontrols-1.7.1+1.19.jar",
+        "Hashes": []
+      }
+    }
+  ],
+  "wasNameManuallyChanged": false
+}
