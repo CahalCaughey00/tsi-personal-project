@@ -1,0 +1,28 @@
+{
+  "name": "tsi-personal-project",
+  "version": "1.0.0",
+  "description": "Personal project for Testing & Software Improvement",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc --no-emit && jest",
+    "build": "rm -rf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CahalCaughey00/tsi-personal-project.git"
+  },
+  "author": "Cahal Caughey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CahalCaughey00/tsi-personal-project/issues"
+  },
+  "homepage": "https://github.com/CahalCaughey00/tsi-personal-project#readme",
+  "dependencies": {
+    "@mikro-orm/core": "^5.7.0",
+    "@mikro-orm/sqlite": "^5.7.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/sqlite3": "^3.1.8"
+  }
+}

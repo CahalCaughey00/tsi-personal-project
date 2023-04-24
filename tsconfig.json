@@ -1,0 +1,4 @@
+{
+  "ts-node": { "compilerOptions": { "experimentalDecorators": true } },
+  "compilerOptions": {"outDir": "dist"}
+}
