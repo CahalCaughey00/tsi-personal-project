@@ -1,4 +1,9 @@
 {
-  "ts-node": { },
-  "compilerOptions": {"outDir": "dist", "experimentalDecorators": true},
+  "ts-node": {},
+  "compilerOptions": {
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true
+  }
 }

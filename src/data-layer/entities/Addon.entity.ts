@@ -1,46 +1,45 @@
-import { Entity, Property, PrimaryKey, OneToOne } from "@mikro-orm/core"
-import { File } from "./File.entity"
+import { Entity, Property, PrimaryKey, OneToOne } from "@mikro-orm/core";
+import { File } from "./File.entity";
 
 @Entity()
 export class Addon {
-
+  
   @PrimaryKey()
-  addonId: number
+  addonId: number;
 
   @Property()
-  gameId: number
+  gameId: number;
 
   @Property()
-  name: string
+  name: string;
 
   @Property()
-  authors: object[]
+  authors: object[];
 
   @Property()
-  primaryAuthor: string
+  primaryAuthor: string;
 
   @Property()
-  primaryCategoryId: number
+  primaryCategoryId: number;
 
   @Property()
-  webSiteUrl: string
+  webSiteUrl: string;
 
   @Property()
-  thumbnailUrl: string
+  thumbnailUrl: string;
 
   @Property()
-  tags: []
+  tags: [];
 
   @Property()
-  installedFile: File
+  installedFile: File;
 
   @Property()
-  status: number
+  status: number;
 
   @Property()
-  intalledTargets: []
+  intalledTargets: [];
 
   @Property()
-  laststFile: File
-
+  laststFile: File;
 }

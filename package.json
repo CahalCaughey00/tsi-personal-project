@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/CahalCaughey00/tsi-personal-project#readme",
   "dependencies": {
-    "@mikro-orm/core": "^5.7.0",
-    "@mikro-orm/sqlite": "^5.7.0",
+    "@mikro-orm/core": "^5.7.2",
+    "@mikro-orm/migrations": "^5.7.2",
+    "@mikro-orm/sqlite": "^5.7.2",
     "sqlite3": "^5.1.6"
   },
   "devDependencies": {
