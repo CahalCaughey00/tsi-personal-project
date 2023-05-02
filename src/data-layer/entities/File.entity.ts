@@ -37,13 +37,17 @@ export class File {
   @Property()
   hasInstallScript: boolean
 
-  @ManyToOne({
-    entity: () => Addon,
-    wrappedReference: true
-  })
+  @Property()
   addonId: number
 
   @Property()
   Hashes: []
+
+
+  toString(){
+    for (const field in this){
+      console.log(`${field}: ${this[field]}`)
+    }
+  }
 
 }

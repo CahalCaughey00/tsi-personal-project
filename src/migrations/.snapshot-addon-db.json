@@ -84,8 +84,8 @@
           "nullable": false,
           "mappedType": "text"
         },
-        "installed_file": {
-          "name": "installed_file",
+        "installed_file_id": {
+          "name": "installed_file_id",
           "type": "text",
           "unsigned": false,
           "autoincrement": false,
@@ -111,8 +111,8 @@
           "nullable": false,
           "mappedType": "text"
         },
-        "lastst_file": {
-          "name": "lastst_file",
+        "latest_file_id": {
+          "name": "latest_file_id",
           "type": "text",
           "unsigned": false,
           "autoincrement": false,
@@ -237,8 +237,8 @@
           "nullable": false,
           "mappedType": "integer"
         },
-        "addon_id_addon_id": {
-          "name": "addon_id_addon_id",
+        "addon_id": {
+          "name": "addon_id",
           "type": "integer",
           "unsigned": false,
           "autoincrement": false,
@@ -259,15 +259,6 @@
       "name": "file",
       "indexes": [
         {
-          "columnNames": [
-            "addon_id_addon_id"
-          ],
-          "composite": false,
-          "keyName": "file_addon_id_addon_id_index",
-          "primary": false,
-          "unique": false
-        },
-        {
           "keyName": "primary",
           "columnNames": [
             "id"
@@ -278,20 +269,7 @@
         }
       ],
       "checks": [],
-      "foreignKeys": {
-        "file_addon_id_addon_id_foreign": {
-          "constraintName": "file_addon_id_addon_id_foreign",
-          "columnNames": [
-            "addon_id_addon_id"
-          ],
-          "localTableName": "file",
-          "referencedColumnNames": [
-            "addon_id"
-          ],
-          "referencedTableName": "addon",
-          "updateRule": "cascade"
-        }
-      }
+      "foreignKeys": {}
     }
   ]
 }

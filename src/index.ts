@@ -1,6 +1,8 @@
 import { MikroORM } from "@mikro-orm/core";
 import { SqliteDriver } from "@mikro-orm/sqlite";
 import { File } from "./data-layer/entities/File.entity";
+import * as fs from "fs"
+import { join as joinPath } from "path"
 
 console.log("Connectig to db...")
 
@@ -13,5 +15,7 @@ MikroORM.init<SqliteDriver>({
   console.log(await orm.isConnected() ? "Connected" : "Not Connected")
   const migrator = orm.getMigrator();
   await migrator.createMigration();
-  orm.close()
+  await migrator.up()
+
+  await orm.close()
 });

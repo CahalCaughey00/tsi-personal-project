@@ -3,7 +3,7 @@ import { File } from "./File.entity";
 
 @Entity()
 export class Addon {
-  
+
   @PrimaryKey()
   addonId: number;
 
@@ -32,7 +32,7 @@ export class Addon {
   tags: [];
 
   @Property()
-  installedFile: File;
+  installedFileId: string;
 
   @Property()
   status: number;
@@ -41,5 +41,5 @@ export class Addon {
   intalledTargets: [];
 
   @Property()
-  laststFile: File;
+  latestFileId: string;
 }
