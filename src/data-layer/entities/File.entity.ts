@@ -1,5 +1,4 @@
-import { Entity, PrimaryKey, Property, ManyToOne } from "@mikro-orm/core";
-import { Addon } from "./Addon.entity"
+import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
 
 @Entity()
 export class File {
@@ -43,8 +42,7 @@ export class File {
   @Property()
   Hashes: []
 
-
-  toString(){
+  printThing(){
     for (const field in this){
       console.log(`${field}: ${this[field]}`)
     }

@@ -5,7 +5,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "target": "ES6",
-    "moduleResolution": "node"
+    "target": "ESNext",
+    "moduleResolution": "node",
+
   }
 }
