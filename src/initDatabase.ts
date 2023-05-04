@@ -3,6 +3,8 @@ import { SqliteDriver } from "@mikro-orm/sqlite";
 import { File } from "./data-layer/entities/File.entity";
 import * as fs from "fs";
 import { join as joinPath } from "path";
+import { IncomingAddon } from "./incoming-entities/incomingAddon";
+import { Addon } from "./data-layer/entities/Addon.entity";
 
 console.log("Connectig to db...");
 
@@ -29,10 +31,10 @@ MikroORM.init<SqliteDriver>({
     fs.readFileSync(joinPath("allMods.json"), "utf-8")
   ).installedAddons;
 
-  addons.forEach((addon) => {
+  addons.forEach((addon: IncomingAddon) => {
+
     const entity: File = new File();
 
-    for (const field in addon.installedFile) {
       entity["entityId"] = addon.installedFile.id;
       entity["Hashes"] = addon.installedFile.Hashes;
       entity["addonId"] = addon.installedFile.projectId;
@@ -46,7 +48,29 @@ MikroORM.init<SqliteDriver>({
       entity["hasInstallScript"] = addon.installedFile.hasInstallScript;
       entity["isAlternate"] = addon.installedFile.isAlternate;
       entity["isAvailable"] = addon.installedFile.isAvailable;
-    }
+
+    em.persist(entity);
+  });
+  await em.flush();
+
+
+  addons.forEach((addon: IncomingAddon) => {
+
+    const entity: Addon = new Addon();
+    
+    entity.entityId = addon.addonID
+    entity.authors = addon.authors
+    entity.gameId = addon.gameID
+    entity.installedFile = addon.installedFile.id
+    entity.intalledTargets = addon.installedTargets
+    entity.latestFile = addon.latestFile.id
+    entity.name = addon.name
+    entity.primaryAuthor = addon.primaryAuthor
+    entity.primaryCategoryId = addon.primaryCategoryId
+    entity.status = addon.status
+    entity.tags = addon.tags
+    entity.thumbnailUrl = addon.thumbnailUrl
+    entity.webSiteUrl = addon.webSiteURL
 
     em.persist(entity);
   });

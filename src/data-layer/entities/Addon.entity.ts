@@ -30,7 +30,7 @@ export class Addon implements DBAddon{
   thumbnailUrl: string;
 
   @Property()
-  tags: [];
+  tags: any[];
 
   @Property()
   installedFile: number;
@@ -39,7 +39,7 @@ export class Addon implements DBAddon{
   status: number;
 
   @Property()
-  intalledTargets: [];
+  intalledTargets: any[];
 
   @Property()
   latestFile: number;

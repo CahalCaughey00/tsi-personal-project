@@ -9,7 +9,7 @@ export interface DBAddon {
   primaryCategoryId: number;
   webSiteUrl: string;
   thumbnailUrl: string;
-  tags: [];
+  tags: any[];
   installedFile: number 
   latestFile: number
 }

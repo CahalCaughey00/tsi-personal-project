@@ -26,7 +26,7 @@ export class File implements DBModFile {
   alternateFileId: number
 
   @Property()
-  dependencies: string[]
+  dependencies: { addonId: number; type: number; }[]
 
   @Property()
   isAvailable: boolean
@@ -41,6 +41,6 @@ export class File implements DBModFile {
   addonId: number
 
   @Property()
-  Hashes: []
+  Hashes: any[]
 
 }

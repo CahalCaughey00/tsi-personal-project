@@ -6,10 +6,10 @@ export interface DBModFile {
   downloadUrl: string;
   isAlternate: boolean;
   alternateFileId: number;
-  dependencies: string[];
+  dependencies: { addonId: number; type: number; }[];
   isAvailable: boolean;
   gameVersion: string[];
   hasInstallScript: boolean;
   addonId: number;
-  Hashes: [];
+  Hashes: any[];
 }
