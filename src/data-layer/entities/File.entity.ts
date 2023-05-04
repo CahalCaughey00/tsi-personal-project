@@ -4,7 +4,7 @@ import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
 export class File {
 
   @PrimaryKey()
-  id!: number
+  entityId!: number
 
   @Property()
   fileName!: string

@@ -1,11 +1,11 @@
 import { Entity, Property, PrimaryKey, OneToOne } from "@mikro-orm/core";
-import { File } from "./File.entity";
+import { File } from "./File.entity.js";
 
 @Entity()
 export class Addon {
 
   @PrimaryKey()
-  addonId: number;
+  entityId: number;
 
   @Property()
   gameId: number;
