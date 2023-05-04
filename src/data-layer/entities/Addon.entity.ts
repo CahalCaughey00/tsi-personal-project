@@ -1,8 +1,9 @@
 import { Entity, Property, PrimaryKey, OneToOne } from "@mikro-orm/core";
+import { DBAddon } from "../interfaces/Addon"
 import { File } from "./File.entity.js";
 
 @Entity()
-export class Addon {
+export class Addon implements DBAddon{
 
   @PrimaryKey()
   entityId: number;
@@ -14,7 +15,7 @@ export class Addon {
   name: string;
 
   @Property()
-  authors: object[];
+  authors: { Name: string }[];
 
   @Property()
   primaryAuthor: string;
@@ -32,7 +33,7 @@ export class Addon {
   tags: [];
 
   @Property()
-  installedFileId: string;
+  installedFile: number;
 
   @Property()
   status: number;
@@ -41,5 +42,5 @@ export class Addon {
   intalledTargets: [];
 
   @Property()
-  latestFileId: string;
+  latestFile: number;
 }

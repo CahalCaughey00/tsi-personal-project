@@ -1,7 +1,8 @@
 import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
+import { DBModFile } from "../interfaces/File"
 
 @Entity()
-export class File {
+export class File implements DBModFile {
 
   @PrimaryKey()
   entityId!: number
@@ -25,7 +26,7 @@ export class File {
   alternateFileId: number
 
   @Property()
-  dependencies: object[]
+  dependencies: string[]
 
   @Property()
   isAvailable: boolean
@@ -41,11 +42,5 @@ export class File {
 
   @Property()
   Hashes: []
-
-  printThing(){
-    for (const field in this){
-      console.log(`${field}: ${this[field]}`)
-    }
-  }
 
 }
