@@ -1,13 +1,12 @@
 {
-  "ts-node": { "esm": true, "experimentalResolver": true},
   "compilerOptions": {
     "outDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "target": "ESNext",
-    "moduleResolution": "nodenext",
-    "module": "esnext"
+    "moduleResolution": "node",
+    "rootDir": "src"
   },
-  "exclude": ["test"]
+  "exclude": ["test"],
 }

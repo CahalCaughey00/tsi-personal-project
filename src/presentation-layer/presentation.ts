@@ -1,8 +1,8 @@
 import readline from "readline";
-import * as app from "../application-layer/application.js"
+import * as app from "../application-layer/application"
 
 export const main2 = async () => {
-  await app.viewAllAddons()
+  await app.viewAllFiles()
 }
 
 const main = async () => {

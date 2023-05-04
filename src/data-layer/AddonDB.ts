@@ -7,8 +7,8 @@ import {
 } from "@mikro-orm/core";
 import { SqlEntityManager, SqliteDriver } from "@mikro-orm/sqlite";
 // import { Addon, File } from "./entities";
-import { Addon } from "./entities/Addon.entity.js";
-import { File } from "./entities/File.entity.js";
+import { Addon } from "./entities/Addon.entity";
+import { File } from "./entities/File.entity";
 import * as fs from "fs";
 import { join as joinPath } from "path";
 
@@ -58,3 +58,5 @@ export class AddonDB {
     await this.orm.close();
   }
 }
+
+export const dbORM = new AddonDB()

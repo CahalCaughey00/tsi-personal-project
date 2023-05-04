@@ -1,4 +1,4 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "conventionalCommits.scopes": ["data-layer"]
+  "conventionalCommits.scopes": ["data-layer", "application-layer", "presentation-layer"]
 }
