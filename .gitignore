@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 # Migrations
-migrations/
+migrations
 
 # Local Database
 addon-db
