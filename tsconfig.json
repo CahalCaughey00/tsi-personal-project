@@ -1,12 +1,13 @@
 {
-  "ts-node": {},
+  "ts-node": { "esm": true, "experimentalResolver": true},
   "compilerOptions": {
     "outDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "target": "ESNext",
-    "moduleResolution": "node",
-
-  }
+    "moduleResolution": "nodenext",
+    "module": "esnext"
+  },
+  
 }
