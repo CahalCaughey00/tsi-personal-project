@@ -9,5 +9,5 @@
     "moduleResolution": "nodenext",
     "module": "esnext"
   },
-  
+  "exclude": ["test"]
 }

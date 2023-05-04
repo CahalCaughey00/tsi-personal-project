@@ -1,9 +1,9 @@
-import { AddonDB } from "../data-layer/data.js";
+import { AddonDB } from "../data-layer/AddonDB.js";
 import { Addon } from "../data-layer/entities/Addon.entity.js";
 import { File } from "../data-layer/entities/File.entity.js";
 
 const database = new AddonDB();
-await database.init()
+await database.init();
 
 export const viewAllAddons = async () => {
   const result = await database.getAll(File);
