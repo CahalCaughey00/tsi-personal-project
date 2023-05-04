@@ -2,9 +2,15 @@ import { AddonDB, dbORM } from "../data-layer/AddonDB";
 import { Addon } from "../data-layer/entities/Addon.entity";
 import { File } from "../data-layer/entities/File.entity";
 
-export const viewAllAddons = async () => {};
+export const viewAllAddons = async () => {
+  const result = await dbORM.getAll(Addon);
+  return result
+};
 
-export const viewAddon = (id: string) => {};
+export const viewAddon = async (id: string) => {
+  const result = await dbORM.getById(Addon, id);
+  return result
+};
 
 export const importAddon = (id: string) => {};
 
@@ -15,7 +21,10 @@ export const viewAllFiles = async () => {
   return result
 };
 
-export const viewFile = (id: string) => {};
+export const viewFile = async (id: string) => {
+  const result = await dbORM.getById(File, id);
+  return result
+};
 
 export const importFile = (id: string) => {};
 
