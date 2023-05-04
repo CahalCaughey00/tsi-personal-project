@@ -1,6 +1,6 @@
 import { MikroORM } from "@mikro-orm/core";
 import { SqliteDriver } from "@mikro-orm/sqlite";
-import { File } from "./data-layer/entities/File.entity.js";
+import { File } from "./data-layer/entities/File.entity";
 import * as fs from "fs";
 import { join as joinPath } from "path";
 
