@@ -3,11 +3,9 @@ import {
   EntityManager,
   EntityName,
   IDatabaseDriver,
-  ManyToOne,
   MikroORM,
 } from "@mikro-orm/core";
 import { SqlEntityManager, SqliteDriver } from "@mikro-orm/sqlite";
-// import { Addon, File } from "./entities";
 import { Addon } from "./entities/Addon.entity";
 import { File } from "./entities/File.entity";
 import { join as joinPath } from "path";
@@ -58,7 +56,7 @@ export class AddonDB {
   public async removeById(table: EntityName<Addon | File>, id: string){
     const itemToRemove = await this.getById(table, id)
     await this.orm.connect();
-    this.entityManager.nativeDelete(table, itemToRemove);
+    this.entityManager.remove(itemToRemove);
     await this.entityManager.flush()
     await this.orm.close();
     return itemToRemove

@@ -3,7 +3,7 @@ import { Addon } from "../data-layer/entities/Addon.entity";
 import { File } from "../data-layer/entities/File.entity";
 import fs from "fs"
 import path from "path"
-import { IncomingFile } from "../incoming-entities/incomingFile";
+
 
 export const viewAllAddons = async () => {
   const result = await dbORM.getAll(Addon);
