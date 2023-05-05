@@ -1,9 +1,9 @@
 {
-  "id": 1234567,
-  "fileName": "iris-mc1.19.2-1.4.5.jar",
-  "fileDate": "2022-12-07T21:28:33.257Z",
+  "entityId": 1234567,
+  "fileName": "THE",
+  "fileDate": "THING",
   "fileLength": 2632361,
-  "downloadUrl": "https://edge.forgecdn.net/files/4143/801/iris-mc1.19.2-1.4.5.jar",
+  "downloadUrl": "WORKED",
   "isAlternate": false,
   "alternateFileId": 0,
   "dependencies": [{ "addonId": 394468, "type": 3 }],

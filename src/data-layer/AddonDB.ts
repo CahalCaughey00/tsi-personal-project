@@ -56,22 +56,35 @@ export class AddonDB {
   }
 
   public async removeById(table: EntityName<Addon | File>, id: string){
-    await this.orm.connect();
     const itemToRemove = await this.getById(table, id)
-    this.entityManager.remove(itemToRemove);
+    await this.orm.connect();
+    this.entityManager.nativeDelete(table, itemToRemove);
     await this.entityManager.flush()
     await this.orm.close();
     return itemToRemove
   }
 
-  public async writeEntity(type: EntityName<Addon | File>, file: IncomingAddon | IncomingFile){
-    await this.orm.connect()
-    if (type.toString() == "Addon"){
-      const mappedEntity = addonMapper(file as IncomingAddon)
-      this.entityManager.persist(mappedEntity)
-    } else if (type.toString() == "File"){
+  public async writeEntity(type: EntityName<Addon | File>, file: any){
+    if (file.fileName){
       const mappedEntity = fileMapper(file as IncomingFile)
-      this.entityManager.persist(mappedEntity)
+      const isExisting = await this.getById(File, file.id)
+      await this.orm.connect()
+      if (!isExisting){
+        this.entityManager.persist(mappedEntity)
+      } else if (isExisting){
+        console.log("Entity already exists with this id. Replace with new...")
+        this.entityManager.assign(mappedEntity, isExisting)
+      }
+    } else if (file.webSiteURL){
+      const mappedEntity = addonMapper(file as IncomingAddon)
+      const isExisting = await this.getById(Addon, file.addonID)
+      await this.orm.connect()
+      if (!isExisting){
+        this.entityManager.persist(mappedEntity)
+      } else if (isExisting){
+        console.log("Entity already exists with this id. Replace with new...")
+        this.entityManager.assign(mappedEntity, isExisting)
+      }
     }
     await this.entityManager.flush()
     await this.orm.close();

@@ -2,6 +2,7 @@ import { dbORM } from "../data-layer/AddonDB";
 import { Addon } from "../data-layer/entities/Addon.entity";
 import { File } from "../data-layer/entities/File.entity";
 import fs from "fs"
+import path from "path"
 import { IncomingFile } from "../incoming-entities/incomingFile";
 
 export const viewAllAddons = async () => {
@@ -14,8 +15,8 @@ export const viewAddon = async (id: string) => {
   return result
 };
 
-export const importAddon = async (filePath: string) => {
-  const fileObj = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+export const importAddon = async (file: string) => {
+  const fileObj = JSON.parse(fs.readFileSync(path.join("import-directory", file), "utf-8"))
   const newAddon = await dbORM.writeEntity(Addon, fileObj)
   return newAddon
 };
@@ -35,8 +36,8 @@ export const viewFile = async (id: string) => {
   return result
 };
 
-export const importFile = async (filePath: string) => {
-  const fileObj = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+export const importFile = async (file: string) => {
+  const fileObj = JSON.parse(fs.readFileSync(path.join("import-directory", file), "utf-8"))
   const newFile = await dbORM.writeEntity(File, fileObj)
   return newFile
 };

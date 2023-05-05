@@ -1,0 +1,91 @@
+{
+  "id": 100000,
+  "fileName": "fake mod",
+  "fileDate": "2022-06-14T15:20:42.047Z",
+  "fileLength": 88018,
+  "releaseType": 1,
+  "fileStatus": 4,
+  "downloadUrl": "https://edge.forgecdn.net/files/3832/74/phosphor-fabric-mc1.19.x-0.8.1.jar",
+  "isAlternate": false,
+  "alternateFileId": 0,
+  "dependencies": [{ "addonId": 360438, "type": 2 }],
+  "isAvailable": true,
+  "modules": [
+    {
+      "foldername": "META-INF",
+      "fingerprint": 2490642089,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "LICENSE.txt",
+      "fingerprint": 1136524626,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "assets",
+      "fingerprint": 3917331610,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "fabric.mod.json",
+      "fingerprint": 1170578422,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "phosphor.accesswidener",
+      "fingerprint": 1204799702,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "phosphor.mixins.json",
+      "fingerprint": 959457470,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "mixins.phosphor.refmap.json",
+      "fingerprint": 3291403689,
+      "invalidFingerprint": false
+    },
+    {
+      "foldername": "net",
+      "fingerprint": 719350116,
+      "invalidFingerprint": false
+    }
+  ],
+  "packageFingerprint": 1712995981,
+  "gameVersion": ["1.19.3", "Fabric", "1.19.2", "1.19.1", "1.19"],
+  "sortableGameVersion": [
+    {
+      "gameVersion": "1.19.3",
+      "gameVersionName": "1.19.3",
+      "gameVersionTypeId": 73407
+    },
+    {
+      "gameVersion": "",
+      "gameVersionName": "Fabric",
+      "gameVersionTypeId": 68441
+    },
+    {
+      "gameVersion": "1.19.2",
+      "gameVersionName": "1.19.2",
+      "gameVersionTypeId": 73407
+    },
+    {
+      "gameVersion": "1.19.1",
+      "gameVersionName": "1.19.1",
+      "gameVersionTypeId": 73407
+    },
+    {
+      "gameVersion": "1.19",
+      "gameVersionName": "1.19",
+      "gameVersionTypeId": 73407
+    }
+  ],
+  "hasInstallScript": false,
+  "isCompatibleWithClient": false,
+  "restrictProjectFileAccess": 0,
+  "projectStatus": 4,
+  "projectId": 372124,
+  "FileNameOnDisk": "phosphor-fabric-mc1.19.x-0.8.1.jar",
+  "Hashes": []
+}

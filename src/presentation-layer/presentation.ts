@@ -2,7 +2,29 @@ import readline from "readline";
 import * as app from "../application-layer/application"
 
 export const main2 = async () => {
-  await app.viewAllFiles()
+  // console.log(await app.viewAllFiles())
+  // console.log("--------------------------------")
+  // console.log(await app.viewAllAddons())
+  // console.log("--------------------------------")
+  // console.log(await app.viewFile("100000"))
+  // console.log("--------------------------------")
+  // console.log(await app.viewAddon("455508"))
+  // console.log("--------------------------------")
+  // console.log("--------------------------------")
+  // console.log("--------------------------------")
+  // console.log("--------------------------------")
+  await app.importFile("file.json")
+  await app.importAddon("addon.json")
+  console.log(await app.viewAddon("1010101010"))
+  console.log(await app.viewFile("100000"))
+  // console.log(await app.viewAllFiles())
+  await app.deleteAddon("1010101010")
+  await app.deleteFile("100000")
+  // console.log(await app.viewAddon("1010101010"))
+  // console.log(await app.viewFile("100000"))
+  console.log(await app.viewAllAddons())
+  console.log(await app.viewAllFiles())
+  console.log("--------------------------------")
 }
 
 const main = async () => {

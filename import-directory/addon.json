@@ -1,0 +1,197 @@
+{
+  "instanceID": "1c5569a2-508f-4042-a0fe-107f6ac6b145",
+  "modSource": 0,
+  "addonID": 1010101010,
+  "gameID": 432,
+  "gameInstanceID": "13277476-b930-44ce-900c-20bee96214dd",
+  "name": "Fake Addon",
+  "authors": [{ "Name": "jellysquid3_" }],
+  "primaryAuthor": "jellysquid3_",
+  "primaryCategoryId": 425,
+  "packageType": 6,
+  "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/sodium",
+  "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/284/773/256/256/637298471098686391.png",
+  "tags": [],
+  "installedFile": {
+    "id": 3957319,
+    "fileName": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+    "fileDate": "2022-08-29T16:03:40.65Z",
+    "fileLength": 1372575,
+    "releaseType": 1,
+    "fileStatus": 4,
+    "downloadUrl": "https://edge.forgecdn.net/files/3957/319/sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+    "isAlternate": false,
+    "alternateFileId": 0,
+    "dependencies": [
+      { "addonId": 372124, "type": 2 },
+      { "addonId": 360438, "type": 2 }
+    ],
+    "isAvailable": true,
+    "modules": [
+      {
+        "foldername": "META-INF",
+        "fingerprint": 1723379489,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "LICENSE.txt",
+        "fingerprint": 1136524626,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "sodium.accesswidener",
+        "fingerprint": 1744769279,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "fabric.mod.json",
+        "fingerprint": 2143486282,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "sodium.mixins.json",
+        "fingerprint": 564551425,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "assets",
+        "fingerprint": 3406733899,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "mixins.sodium.refmap.json",
+        "fingerprint": 1582425630,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "me",
+        "fingerprint": 1864081753,
+        "invalidFingerprint": false
+      }
+    ],
+    "packageFingerprint": 4235169426,
+    "gameVersion": ["Fabric", "1.19.2", "Quilt"],
+    "sortableGameVersion": [
+      {
+        "gameVersion": "",
+        "gameVersionName": "Fabric",
+        "gameVersionTypeId": 68441
+      },
+      {
+        "gameVersion": "1.19.2",
+        "gameVersionName": "1.19.2",
+        "gameVersionTypeId": 73407
+      },
+      {
+        "gameVersion": "",
+        "gameVersionName": "Quilt",
+        "gameVersionTypeId": 68441
+      }
+    ],
+    "hasInstallScript": false,
+    "isCompatibleWithClient": false,
+    "restrictProjectFileAccess": 0,
+    "projectStatus": 4,
+    "projectId": 394468,
+    "FileNameOnDisk": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+    "Hashes": []
+  },
+  "dateInstalled": "2022-12-12T11:35:53.300024Z",
+  "dateUpdated": "2022-12-12T11:35:53.300024Z",
+  "dateLastUpdateAttempted": "0001-01-01T00:00:00",
+  "status": 5,
+  "installSource": 0,
+  "preferenceReleaseType": null,
+  "preferenceAutoInstallUpdates": false,
+  "preferenceAlternateFile": false,
+  "preferenceIsIgnored": false,
+  "isModified": false,
+  "isWorkingCopy": false,
+  "isFuzzyMatch": false,
+  "manifestName": null,
+  "installedTargets": [],
+  "latestFile": {
+    "id": 3957319,
+    "fileName": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+    "fileDate": "2022-08-29T16:03:40.65Z",
+    "fileLength": 1372575,
+    "releaseType": 1,
+    "fileStatus": 4,
+    "downloadUrl": "https://edge.forgecdn.net/files/3957/319/sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+    "isAlternate": false,
+    "alternateFileId": 0,
+    "dependencies": [
+      { "addonId": 372124, "type": 2 },
+      { "addonId": 360438, "type": 2 }
+    ],
+    "isAvailable": true,
+    "modules": [
+      {
+        "foldername": "META-INF",
+        "fingerprint": 1723379489,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "LICENSE.txt",
+        "fingerprint": 1136524626,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "sodium.accesswidener",
+        "fingerprint": 1744769279,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "fabric.mod.json",
+        "fingerprint": 2143486282,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "sodium.mixins.json",
+        "fingerprint": 564551425,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "assets",
+        "fingerprint": 3406733899,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "mixins.sodium.refmap.json",
+        "fingerprint": 1582425630,
+        "invalidFingerprint": false
+      },
+      {
+        "foldername": "me",
+        "fingerprint": 1864081753,
+        "invalidFingerprint": false
+      }
+    ],
+    "packageFingerprint": 4235169426,
+    "gameVersion": ["Fabric", "1.19.2", "Quilt"],
+    "sortableGameVersion": [
+      {
+        "gameVersion": "",
+        "gameVersionName": "Fabric",
+        "gameVersionTypeId": 68441
+      },
+      {
+        "gameVersion": "1.19.2",
+        "gameVersionName": "1.19.2",
+        "gameVersionTypeId": 73407
+      },
+      {
+        "gameVersion": "",
+        "gameVersionName": "Quilt",
+        "gameVersionTypeId": 68441
+      }
+    ],
+    "hasInstallScript": false,
+    "isCompatibleWithClient": false,
+    "restrictProjectFileAccess": 0,
+    "projectStatus": 4,
+    "projectId": 394468,
+    "FileNameOnDisk": "sodium-fabric-mc1.19.2-0.4.4+build.18.jar",
+    "Hashes": []
+  }
+}
