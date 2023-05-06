@@ -1,6 +1,6 @@
 import { viewAllFiles } from "../../src/application-layer/application";
 import { dbORM } from "../../src/data-layer/AddonDB";
-import { allFilesMock } from "./fixtures";
+import { allFilesMock } from "../fixtures";
 
 jest.mock("../../src/data-layer/AddonDB")
 const getAllMock = jest.spyOn(dbORM, "getAll");
