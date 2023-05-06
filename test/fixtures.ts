@@ -1,6 +1,6 @@
 // export const allAddonsMock = []
-import { DBAddon } from "../../src/data-layer/interfaces/Addon";
-import { DBModFile } from "../../src/data-layer/interfaces/File";
+import { DBAddon } from "../src/data-layer/interfaces/Addon";
+import { DBModFile } from "../src/data-layer/interfaces/File";
 
 export const allFilesMock: DBModFile[] = [
   {
@@ -54,6 +54,8 @@ export const allAddonsMock: DBAddon[] = [
     tags: [],
     installedFile: 3832074,
     latestFile: 3832074,
+    installedTargets: [],
+    status: 1
   },
   {
     entityId: 455508,
@@ -68,6 +70,8 @@ export const allAddonsMock: DBAddon[] = [
     tags: [],
     installedFile: 4143801,
     latestFile: 4143801,
+    installedTargets: [],
+    status: 1
   },
 ];
 
@@ -100,4 +104,27 @@ export const mockSingleAddon: DBAddon =  {
   tags: [],
   installedFile: 4143801,
   latestFile: 4143801,
+  installedTargets: [],
+  status: 1
 }
+
+export const mockNewAddon: DBAddon = {
+  entityId: 111111,
+  gameId: 222,
+  name: "Iris Shaders",
+  authors: [{ Name: "Johnny Davidson" }, { Name: "IMS21" }],
+  primaryAuthor: "Johnny Davidson",
+  primaryCategoryId: 333,
+  webSiteUrl: "https://www.fakemod.com",
+  thumbnailUrl:
+    "https://yvuhij.jpeg",
+  tags: [],
+  installedFile: 444444,
+  latestFile: 555555,
+  installedTargets: [],
+  status: 1
+}
+
+export const mockNewFile: DBModFile = {
+  
+} as DBModFile

@@ -62,7 +62,7 @@ MikroORM.init<SqliteDriver>({
     entity.authors = addon.authors
     entity.gameId = addon.gameID
     entity.installedFile = addon.installedFile.id
-    entity.intalledTargets = addon.installedTargets
+    entity.installedTargets = addon.installedTargets
     entity.latestFile = addon.latestFile.id
     entity.name = addon.name
     entity.primaryAuthor = addon.primaryAuthor

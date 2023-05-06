@@ -11,5 +11,7 @@ export interface DBAddon {
   thumbnailUrl: string;
   tags: any[];
   installedFile: number 
+  status: number
+  installedTargets: any[]
   latestFile: number
 }

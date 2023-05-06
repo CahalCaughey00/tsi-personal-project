@@ -8,7 +8,7 @@ export const addonMapper = (file: IncomingAddon) => {
   entity.authors = file.authors
   entity.gameId = file.gameID
   entity.installedFile = file.installedFile.id
-  entity.intalledTargets = file.installedTargets
+  entity.installedTargets = file.installedTargets
   entity.latestFile = file.latestFile.id
   entity.name = file.name
   entity.primaryAuthor = file.primaryAuthor

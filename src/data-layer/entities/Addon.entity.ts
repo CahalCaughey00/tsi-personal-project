@@ -39,7 +39,7 @@ export class Addon implements DBAddon{
   status: number;
 
   @Property()
-  intalledTargets: any[];
+  installedTargets: any[];
 
   @Property()
   latestFile: number;
