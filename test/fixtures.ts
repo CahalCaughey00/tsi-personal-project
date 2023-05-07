@@ -1,4 +1,3 @@
-// export const allAddonsMock = []
 import { DBAddon } from "../src/data-layer/interfaces/Addon";
 import { DBModFile } from "../src/data-layer/interfaces/File";
 
