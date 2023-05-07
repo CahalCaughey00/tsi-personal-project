@@ -66,6 +66,9 @@ export class AddonDB {
         console.log("Entity already exists with this id. Replace with new...");
         this.entityManager.assign(mappedEntity, isExisting);
       }
+      await this.entityManager.flush();
+      await this.orm.close();
+      return mappedEntity
     } else if (file.webSiteURL) {
       const mappedEntity = addonMapper(file as IncomingAddon);
       const isExisting = await this.getById(type, file.addonID);
@@ -76,9 +79,10 @@ export class AddonDB {
         console.log("Entity already exists with this id. Replace with new...");
         this.entityManager.assign(mappedEntity, isExisting);
       }
+      await this.entityManager.flush();
+      await this.orm.close();
+      return mappedEntity
     }
-    await this.entityManager.flush();
-    await this.orm.close();
   }
 }
 

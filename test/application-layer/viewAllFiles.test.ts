@@ -8,7 +8,7 @@ const getAllMock = jest.spyOn(dbORM, "getAll");
 describe("GIVEN the viewAllFiles function", () => {
   getAllMock.mockResolvedValue(allFilesMock);
   const expected = JSON.parse(JSON.stringify(allFilesMock));
-  test("THEN a vaild File entity is returned", async () => {
+  it("SHOULD return a vaild File entity is returned", async () => {
     const actual = await viewAllFiles();
     expect(getAllMock).toBeCalledTimes(1);
     expect(actual).toEqual(expected);
