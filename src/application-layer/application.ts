@@ -4,10 +4,10 @@ import { File } from "../data-layer/entities/File.entity";
 import fs from "fs"
 import path from "path"
 
-
+export let allAddons: any[] = []
 export const viewAllAddons = async (): Promise<any[]> => {
-  const result = await dbORM.getAll(Addon);
-  const allIds = result.map(obj => obj.entityId)
+  allAddons = await dbORM.getAll(Addon);
+  const allIds = allAddons.map(obj => obj.entityId)
   return allIds
 };
 
