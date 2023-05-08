@@ -1,6 +1,6 @@
 import { viewAllFiles, deleteFile } from "../../application-layer/application";
 
-export const choiceDeleteFile = async () => {
+export const choiceDeleteFile = async (context) => {
   const inquirer = (await import("inquirer")).default;
 
   const allFiles = await viewAllFiles();
@@ -12,7 +12,7 @@ export const choiceDeleteFile = async () => {
       message: "",
     },
   ]);
-  const file = await deleteFile(choice.Files);
+  const file = await deleteFile(choice.Files, context);
   console.log()
   console.log(file);
   console.log()

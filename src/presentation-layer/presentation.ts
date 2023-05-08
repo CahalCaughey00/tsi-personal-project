@@ -1,4 +1,3 @@
-import { LOG_LEV } from "../index";
 import {
   viewAddons,
   choiceImportAddon,
@@ -7,9 +6,8 @@ import {
   choiceImportFile,
   choiceDeleteFile,
 } from "./user-interactions";
-import { LOG_LEVEL } from "../logger";
 
-export const presentation = async () => {
+export const presentation = async (context) => {
   const inquirer = (await import("inquirer")).default;
 
   const options = [
@@ -36,42 +34,42 @@ export const presentation = async () => {
     const response = await inquirer.prompt([menu]);
     switch (response["AddonDB"]) {
       case "View Addons":
-        result = await viewAddons();
+        result = await viewAddons(context);
         if (!result) {
           return;
         } else {
           break;
         }
       case "Import an Addon":
-        result = await choiceImportAddon();
+        result = await choiceImportAddon(context);
         if (!result) {
           return;
         } else {
           break;
         }
       case "Delete an Addon":
-        result = await choiceDeleteAddon();
+        result = await choiceDeleteAddon(context);
         if (!result) {
           return;
         } else {
           break;
         }
       case "View Files":
-        result = await viewFiles();
+        result = await viewFiles(context);
         if (!result) {
           return;
         } else {
           break;
         }
       case "Import a File":
-        result = await choiceImportFile();
+        result = await choiceImportFile(context);
         if (!result) {
           return;
         } else {
           break;
         }
       case "Delete a File":
-        result = await choiceDeleteFile();
+        result = await choiceDeleteFile(context);
         if (!result) {
           return;
         } else {

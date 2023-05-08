@@ -1,6 +1,6 @@
 import { viewAllAddons, viewAddon } from "../../application-layer/application";
 
-export const viewAddons = async () => {
+export const viewAddons = async (context) => {
   const inquirer = (await import("inquirer")).default;
 
   const allAddons = await viewAllAddons();
@@ -12,7 +12,7 @@ export const viewAddons = async () => {
       message: "",
     },
   ]);
-  const addon = await viewAddon(choice.Addons);
+  const addon = await viewAddon(choice.Addons, context);
   console.log()
   console.log(addon);
   console.log()

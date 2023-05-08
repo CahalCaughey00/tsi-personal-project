@@ -5,10 +5,10 @@
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "target": "ESNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "rootDir": "src",
     "module": "NodeNext"
   },
-  "exclude":["test"],
-  "ts-node": {"esm": true, }
+  "exclude": ["test"],
+  "ts-node": { "esm": true }
 }

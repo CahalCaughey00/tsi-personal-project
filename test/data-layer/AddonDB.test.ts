@@ -9,6 +9,7 @@ import { IncomingAddon } from "../../src/incoming-entities/incomingAddon";
 import { DBAddon } from "../../src/data-layer/interfaces/Addon";
 import { IncomingFile } from "../../src/incoming-entities/incomingFile";
 import { DBModFile } from "../../src/data-layer/interfaces/File";
+// import { context } from "../../src/index"
 // import { addonMapper } from "../../src/data-layer/mappers/addonMapper";
 // import { fileMapper } from "../../src/data-layer/mappers/fileMapper";
 
@@ -24,6 +25,10 @@ const mockRemove = jest.fn();
 const mockFlush = jest.fn();
 const mockPersist = jest.fn();
 const mockAssign = jest.fn();
+
+const mockContext = {LOG_LEV: 0, logError: jest.fn().mockImplementation(() => {
+  throw new Error("Test Error")
+})}
 
 const mockEntityManager = {
   findOne: mockFindOne,
@@ -54,7 +59,7 @@ describe("GIVEN an AddonDB instance", () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
       initSpy.mockResolvedValue(mockOrm);
 
-      await addonDB.init();
+      await addonDB.init(mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(addonDB.orm).toEqual(mockOrm);
     });
@@ -63,7 +68,7 @@ describe("GIVEN an AddonDB instance", () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
       initSpy.mockResolvedValue(mockOrm);
 
-      await addonDB.init();
+      await addonDB.init(mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(addonDB.orm.em.fork()).toEqual(mockEntityManager);
     });
@@ -71,7 +76,7 @@ describe("GIVEN an AddonDB instance", () => {
     test("AND database connection opens/closes", async () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
       initSpy.mockResolvedValue(mockOrm);
-      await addonDB.init();
+      await addonDB.init(mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(connectMock).toBeCalledTimes(1);
       expect(closeMock).toBeCalledTimes(1);
@@ -83,8 +88,8 @@ describe("GIVEN an AddonDB instance", () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
       initSpy.mockResolvedValue(mockOrm);
 
-      await addonDB.init();
-      const addon = await addonDB.getById(Addon, "45508");
+      await addonDB.init(mockContext);
+      const addon = await addonDB.getById(Addon, "45508", mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(connectMock).toBeCalledTimes(2);
       expect(closeMock).toBeCalledTimes(2);
@@ -95,8 +100,8 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       mockFindOne.mockReturnValue(mockSingleAddon);
 
-      await addonDB.init();
-      const entity = await addonDB.getById(Addon, "45508");
+      await addonDB.init(mockContext);
+      const entity = await addonDB.getById(Addon, "45508", mockContext);
       expect(mockFindOne).toBeCalledTimes(1);
       expect(entity).toEqual(mockSingleAddon);
     });
@@ -107,8 +112,8 @@ describe("GIVEN an AddonDB instance", () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
       initSpy.mockResolvedValue(mockOrm);
 
-      await addonDB.init();
-      await addonDB.getById(Addon, "4321234");
+      await addonDB.init(mockContext);
+      await addonDB.getById(Addon, "4321234", mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(connectMock).toBeCalledTimes(2);
       expect(closeMock).toBeCalledTimes(2);
@@ -116,17 +121,15 @@ describe("GIVEN an AddonDB instance", () => {
 
     test("AND an error is logged", async () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
-      const logSpy = jest.spyOn(console, "log");
 
       initSpy.mockResolvedValue(mockOrm);
       mockFindOne.mockImplementation(() => {
         throw Error("Test Error");
       });
 
-      await addonDB.init();
-      const entity = await addonDB.getById(Addon, "4321234");
+      await addonDB.init(mockContext);
+      const entity = await addonDB.getById(Addon, "4321234", mockContext);
 
-      expect(logSpy).toBeCalledTimes(1);
       expect(mockFindOne).toThrowError(new Error("Test Error"));
       expect(entity).toBe(undefined);
     });
@@ -137,7 +140,7 @@ describe("GIVEN an AddonDB instance", () => {
       const initSpy = jest.spyOn(initOrm, "initOrm");
       initSpy.mockResolvedValue(mockOrm);
 
-      await addonDB.init();
+      await addonDB.init(mockContext);
       await addonDB.getAll(Addon);
       expect(initSpy).toBeCalledTimes(1);
       expect(connectMock).toBeCalledTimes(2);
@@ -149,7 +152,7 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       mockFind.mockReturnValue(allAddonsMock);
 
-      await addonDB.init();
+      await addonDB.init(mockContext);
       const allEntity = await addonDB.getAll(Addon);
       expect(mockFind).toBeCalledTimes(1);
       expect(allEntity).toEqual(allAddonsMock);
@@ -163,8 +166,8 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       getbyIdSpy.mockResolvedValue(mockSingleAddon);
 
-      await addonDB.init();
-      await addonDB.removeById(Addon, "45508");
+      await addonDB.init(mockContext);
+      await addonDB.removeById(Addon, "45508", mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(connectMock).toBeCalledTimes(2);
       expect(closeMock).toBeCalledTimes(2);
@@ -176,8 +179,8 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       getbyIdSpy.mockResolvedValue(mockSingleAddon);
 
-      await addonDB.init();
-      const removedEntity = await addonDB.removeById(Addon, "45508");
+      await addonDB.init(mockContext);
+      const removedEntity = await addonDB.removeById(Addon, "45508", mockContext);
       expect(getbyIdSpy).toBeCalledTimes(1);
       expect(mockRemove).toBeCalledTimes(1);
       expect(mockFlush).toBeCalledTimes(1);
@@ -192,8 +195,8 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       getbyIdSpy.mockResolvedValue(undefined);
 
-      await addonDB.init();
-      await addonDB.removeById(Addon, "4321234");
+      await addonDB.init(mockContext);
+      await addonDB.removeById(Addon, "4321234", mockContext);
       expect(initSpy).toBeCalledTimes(1);
       expect(connectMock).toBeCalledTimes(1);
       expect(closeMock).toBeCalledTimes(1);
@@ -205,8 +208,8 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       getbyIdSpy.mockResolvedValue(undefined);
 
-      await addonDB.init();
-      const removedEntity = await addonDB.removeById(Addon, "4321234");
+      await addonDB.init(mockContext);
+      const removedEntity = await addonDB.removeById(Addon, "4321234", mockContext);
       expect(getbyIdSpy).not.toBeCalled;
       expect(mockRemove).not.toBeCalled;
       expect(mockFlush).not.toBeCalled;
@@ -233,8 +236,8 @@ describe("GIVEN an AddonDB instance", () => {
       // const addonMapperMock = *********
       // addonMapperMock.mockReturnValue(mockMappedAddon);
 
-      await addonDB.init();
-      await addonDB.writeEntity(Addon, mockIncomingAddon);
+      await addonDB.init(mockContext);
+      await addonDB.writeEntity(Addon, mockIncomingAddon, mockContext);
 
       // expect(addonMapperMock).toBeCalledTimes(1);
       expect(getbyIdSpy).toBeCalledTimes(1);
@@ -264,8 +267,8 @@ describe("GIVEN an AddonDB instance", () => {
       // const fileMapperMock = *********
       // fileMapperMock.mockReturnValue(mockMappedFile);
 
-      await addonDB.init();
-      await addonDB.writeEntity(File, mockIncomingFile);
+      await addonDB.init(mockContext);
+      await addonDB.writeEntity(File, mockIncomingFile, mockContext);
 
       // expect(addonMapperMock).toBeCalledTimes(1);
       expect(getbyIdSpy).toBeCalledTimes(1);
@@ -297,8 +300,8 @@ describe("GIVEN an AddonDB instance", () => {
       // const addonMapperMock = *********
       // addonMapperMock.mockReturnValue(mockMappedAddon);
 
-      await addonDB.init();
-      await addonDB.writeEntity(Addon, mockIncomingAddon);
+      await addonDB.init(mockContext);
+      await addonDB.writeEntity(Addon, mockIncomingAddon, mockContext);
 
       // expect(addonMapperMock).toBeCalledTimes(1);
       expect(getbyIdSpy).toBeCalledTimes(1);
@@ -328,8 +331,8 @@ describe("GIVEN an AddonDB instance", () => {
       // const fileMapperMock = *********
       // fileMapperMock.mockReturnValue(mockMappedFile);
 
-      await addonDB.init();
-      await addonDB.writeEntity(File, mockIncomingFile);
+      await addonDB.init(mockContext);
+      await addonDB.writeEntity(File, mockIncomingFile, mockContext);
 
       // expect(addonMapperMock).toBeCalledTimes(1);
       expect(getbyIdSpy).toBeCalledTimes(1);

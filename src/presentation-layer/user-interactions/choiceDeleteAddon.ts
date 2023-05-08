@@ -1,6 +1,6 @@
 import { viewAllAddons, deleteAddon } from "../../application-layer/application";
 
-export const choiceDeleteAddon = async () => {
+export const choiceDeleteAddon = async (context) => {
   const inquirer = (await import("inquirer")).default;
 
   const allAddons = await viewAllAddons();
@@ -12,7 +12,7 @@ export const choiceDeleteAddon = async () => {
       message: "",
     },
   ]);
-  const addon = await deleteAddon(choice.Addons);
+  const addon = await deleteAddon(choice.Addons, context);
   console.log()
   console.log(addon);
   console.log()

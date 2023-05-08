@@ -1,7 +1,5 @@
-import { SqliteDriver } from "@mikro-orm/sqlite";
 import { IncomingAddon } from "../incoming-entities/incomingAddon";
 import { IncomingFile } from "../incoming-entities/incomingFile";
-import { logError } from "../logger";
 import { initOrm } from "./initOrm";
 import { addonMapper } from "./mappers/addonMapper";
 import { fileMapper } from "./mappers/fileMapper";
@@ -12,18 +10,18 @@ export class AddonDB {
 
   constructor() {}
 
-  public async init() {
+  public async init(context) {
     try {
       this.orm = await initOrm();
       await this.orm.connect();
       this.entityManager = this.orm.em.fork();
       await this.orm.close();
     } catch (error) {
-      logError(error);
+      context.logError(context.LOG_LEV, error);
     }
   }
 
-  public async getById(table: any, id: string) {
+  public async getById(table: any, id: string, context) {
     try {
       await this.orm.connect();
 
@@ -35,7 +33,7 @@ export class AddonDB {
       await this.orm.close();
       return result;
     } catch (error) {
-      logError(error);
+      context.logError(context.LOG_LEV, error);
       return undefined;
     }
   }
@@ -47,8 +45,8 @@ export class AddonDB {
     return result;
   }
 
-  public async removeById(table: any, id: string) {
-    const itemToRemove = await this.getById(table, id);
+  public async removeById(table: any, id: string, context) {
+    const itemToRemove = await this.getById(table, id, context);
     try{
       if (itemToRemove) {
         await this.orm.connect();
@@ -60,17 +58,17 @@ export class AddonDB {
         return undefined;
       }
     } catch (error){
-      logError(error)
+      context.logError(context.LOG_LEV, error)
       return undefined
     }
 
   }
 
-  public async writeEntity(type: any, file: any) {
+  public async writeEntity(type: any, file: any, context) {
     try {
       if (file.fileName) {
         const mappedEntity = fileMapper(file as IncomingFile);
-        const isExisting = await this.getById(type, file.id);
+        const isExisting = await this.getById(type, file.id, context);
         await this.orm.connect();
         if (!isExisting) {
           this.entityManager.persist(mappedEntity);
@@ -83,7 +81,7 @@ export class AddonDB {
         return mappedEntity;
       } else if (file.webSiteURL) {
         const mappedEntity = addonMapper(file as IncomingAddon);
-        const isExisting = await this.getById(type, file.addonID);
+        const isExisting = await this.getById(type, file.addonID, context);
         await this.orm.connect();
         if (!isExisting) {
           this.entityManager.persist(mappedEntity);
@@ -96,7 +94,7 @@ export class AddonDB {
         return mappedEntity;
       }
     } catch (error) {
-      logError(error)
+      context.logError(context.LOG_LEV, error)
       return undefined
     }
   }

@@ -1,11 +1,19 @@
 import { presentation } from "./presentation-layer/presentation";
 import { dbORM } from "./data-layer/AddonDB";
-import { LOG_LEVEL } from "./logger";
+import { logError, LOG_LEVEL } from "./logger";
 
-export const LOG_LEV: LOG_LEVEL = LOG_LEVEL.LIGHT;
+interface Context {
+  LOG_LEV: LOG_LEVEL;
+  logError: (LOG_LEV: LOG_LEVEL, error) => void;
+}
 
-const main = async () => {
-  switch (LOG_LEV.valueOf()) {
+export const context: Context= {
+  LOG_LEV: LOG_LEVEL.LIGHT,
+  logError: logError,
+};
+
+const main = async (context: Context) => {
+  switch (context.LOG_LEV) {
     case LOG_LEVEL.LIGHT:
       console.log("Running in DEBUG MODE: LIGHT\n");
       break;
@@ -16,8 +24,8 @@ const main = async () => {
       break;
   }
 
-  await dbORM.init();
-  await presentation();
+  await dbORM.init(context);
+  await presentation(context);
 };
 
-main();
+main(context);

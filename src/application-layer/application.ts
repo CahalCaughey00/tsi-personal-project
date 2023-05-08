@@ -11,19 +11,19 @@ export const viewAllAddons = async (): Promise<any[]> => {
   return allIds
 };
 
-export const viewAddon = async (id: string) => {
-  const result = await dbORM.getById(Addon, id);
+export const viewAddon = async (id: string, context) => {
+  const result = await dbORM.getById(Addon, id, context);
   return result
 };
 
-export const importAddon = async (file: string) => {
+export const importAddon = async (file: string, context) => {
   const fileObj = JSON.parse(fs.readFileSync(path.join("import-directory", file), "utf-8"))
-  const newAddon = await dbORM.writeEntity(Addon, fileObj)
+  const newAddon = await dbORM.writeEntity(Addon, fileObj, context)
   return newAddon
 };
 
-export const deleteAddon = async (id: string) => {
-  const removedItem = await dbORM.removeById(Addon, id)
+export const deleteAddon = async (id: string, context) => {
+  const removedItem = await dbORM.removeById(Addon, id, context)
   return removedItem
 };
 
@@ -33,18 +33,18 @@ export const viewAllFiles = async () => {
   return allIds
 };
 
-export const viewFile = async (id: string) => {
-  const result = await dbORM.getById(File, id);
+export const viewFile = async (id: string, context) => {
+  const result = await dbORM.getById(File, id, context);
   return result
 };
 
-export const importFile = async (file: string) => {
+export const importFile = async (file: string, context) => {
   const fileObj = JSON.parse(fs.readFileSync(path.join("import-directory", file), "utf-8"))
-  const newFile = await dbORM.writeEntity(File, fileObj)
+  const newFile = await dbORM.writeEntity(File, fileObj, context)
   return newFile
 };
 
-export const deleteFile = async (id: string) => {
-  const removedItem = await dbORM.removeById(File, id)
+export const deleteFile = async (id: string, context) => {
+  const removedItem = await dbORM.removeById(File, id, context)
   return removedItem
 };

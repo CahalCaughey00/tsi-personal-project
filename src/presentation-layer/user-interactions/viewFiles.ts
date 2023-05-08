@@ -1,6 +1,6 @@
 import { viewAllFiles, viewFile } from "../../application-layer/application";
 
-export const viewFiles = async () => {
+export const viewFiles = async (context) => {
   const inquirer = (await import("inquirer")).default;
 
   const allFiles = await viewAllFiles();
@@ -12,7 +12,7 @@ export const viewFiles = async () => {
       message: "",
     },
   ]);
-  const file = await viewFile(choice.Files);
+  const file = await viewFile(choice.Files, context);
   console.log()
   console.log(file);
   console.log()
