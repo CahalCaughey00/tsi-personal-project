@@ -28,7 +28,7 @@ MikroORM.init<SqliteDriver>({
   const em = orm.em.fork();
 
   const addons = JSON.parse(
-    fs.readFileSync(joinPath("allMods.json"), "utf-8")
+    fs.readFileSync(joinPath("example-files", "allMods.json"), "utf-8")
   ).installedAddons;
 
   addons.forEach((addon: IncomingAddon) => {
