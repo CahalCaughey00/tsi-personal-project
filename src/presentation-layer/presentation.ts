@@ -1,6 +1,11 @@
-import { viewAddons, choiceImportAddon, choiceDeleteAddon } from "./user-interactions";
-
-
+import {
+  viewAddons,
+  choiceImportAddon,
+  choiceDeleteAddon,
+  viewFiles,
+  choiceImportFile,
+  choiceDeleteFile,
+} from "./user-interactions";
 
 export const presentation = async () => {
   const inquirer = (await import("inquirer")).default;
@@ -21,42 +26,60 @@ export const presentation = async () => {
     message: "",
   };
 
-  let result
-  while (true){
+  let result;
+  while (true) {
     const response = await inquirer.prompt([menu]);
     switch (response["AddonDB"]) {
       case "View Addons":
         result = await viewAddons();
-        console.log(result)
+        console.log(result);
         if (!result) {
-          return
+          return;
         } else {
-          break
+          break;
         }
       case "Import an Addon":
         result = await choiceImportAddon();
-        console.log(result)
+        console.log(result);
         if (!result) {
-          return
+          return;
         } else {
-          break
+          break;
         }
       case "Delete an Addon":
         result = await choiceDeleteAddon();
-        console.log(result)
+        console.log(result);
         if (!result) {
-          return
+          return;
         } else {
-          break
+          break;
         }
       case "View Files":
-        // await
-        break;
+        result = await viewFiles();
+        console.log(result);
+        if (!result) {
+          return;
+        } else {
+          break;
+        }
       case "Import a File":
-        // await
-        break;
+        result = await choiceImportFile();
+        console.log(result);
+        if (!result) {
+          return;
+        } else {
+          break;
+        }
       case "Delete a File":
-        // await
+        result = await choiceDeleteFile();
+        console.log(result);
+        if (!result) {
+          return;
+        } else {
+          break;
+        }
+      default:
+        console.log("Something went horribly wrong!");
         break;
     }
   }
