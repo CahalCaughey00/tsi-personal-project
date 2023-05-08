@@ -1,14 +1,12 @@
-import { main2 } from "./presentation-layer/presentation"
+import { presentation } from "./presentation-layer/presentation"
 import { dbORM } from "./data-layer/AddonDB"
 
 
 const main = async () => {
 
   await dbORM.init()
-  await main2()
+  await presentation()
 
 }
 
-main().then(() => {
-  console.log("Done")
-})
+main()

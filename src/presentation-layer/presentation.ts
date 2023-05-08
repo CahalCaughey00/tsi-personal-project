@@ -1,64 +1,63 @@
-import readline from "readline";
-import * as app from "../application-layer/application"
+import { viewAddons, choiceImportAddon, choiceDeleteAddon } from "./user-interactions";
 
-export const main2 = async () => {
-  // console.log(await app.viewAllFiles())
-  // console.log("--------------------------------")
-  // console.log(await app.viewAllAddons())
-  // console.log("--------------------------------")
-  // console.log(await app.viewFile("100000"))
-  // console.log("--------------------------------")
-  // console.log(await app.viewAddon("455508"))
-  // console.log("--------------------------------")
-  // console.log("--------------------------------")
-  // console.log("--------------------------------")
-  // console.log("--------------------------------")
-  await app.importFile("file.json")
-  await app.importAddon("addon.json")
-  console.log(await app.viewAddon("1010101010"))
-  console.log(await app.viewFile("100000"))
-  // console.log(await app.viewAllFiles())
-  await app.deleteAddon("1010101010")
-  await app.deleteFile("100000")
-  // console.log(await app.viewAddon("1010101010"))
-  // console.log(await app.viewFile("100000"))
-  console.log(await app.viewAllAddons())
-  console.log(await app.viewAllFiles())
-  console.log("--------------------------------")
-}
 
-const main = async () => {
-  const prompt = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
 
-  
-  let exit = false;
-  while (!exit) {
-    console.log("Select an option: \n--------------");
-    console.log("1. View an addon");
-    console.log("2. Import an addon");
-    console.log("3. Delete an addon");
-    console.log("4. Exit AddonDB");
-    await new Promise<void>((resolve, reject) => {
-      prompt.question("THINGNIGN", (response) => {
-        switch (response) {
-          case "1":
-            console.log("Enter an addon to view");
-            resolve()
-          case "2":
-            console.log("Choose an addon to view");
-            resolve()
-          case "3":
-            console.log("Enter an addon to delete");
-            resolve()
-          case "3":
-            console.log("Exiting AddonDB...");
-            exit = true;
-            resolve()
+export const presentation = async () => {
+  const inquirer = (await import("inquirer")).default;
+
+  const options = [
+    "View Addons",
+    "Import an Addon",
+    "Delete an Addon",
+    new inquirer.Separator(),
+    "View Files",
+    "Import a File",
+    "Delete a File",
+  ];
+  const menu = {
+    name: "AddonDB",
+    choices: options,
+    type: "list",
+    message: "",
+  };
+
+  let result
+  while (true){
+    const response = await inquirer.prompt([menu]);
+    switch (response["AddonDB"]) {
+      case "View Addons":
+        result = await viewAddons();
+        console.log(result)
+        if (!result) {
+          return
+        } else {
+          break
         }
-      });
-    })
+      case "Import an Addon":
+        result = await choiceImportAddon();
+        console.log(result)
+        if (!result) {
+          return
+        } else {
+          break
+        }
+      case "Delete an Addon":
+        result = await choiceDeleteAddon();
+        console.log(result)
+        if (!result) {
+          return
+        } else {
+          break
+        }
+      case "View Files":
+        // await
+        break;
+      case "Import a File":
+        // await
+        break;
+      case "Delete a File":
+        // await
+        break;
+    }
   }
 };

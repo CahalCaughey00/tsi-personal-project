@@ -5,9 +5,10 @@ import fs from "fs"
 import path from "path"
 
 
-export const viewAllAddons = async () => {
+export const viewAllAddons = async (): Promise<any[]> => {
   const result = await dbORM.getAll(Addon);
-  return result
+  const allIds = result.map(obj => obj.entityId)
+  return allIds
 };
 
 export const viewAddon = async (id: string) => {
@@ -28,7 +29,8 @@ export const deleteAddon = async (id: string) => {
 
 export const viewAllFiles = async () => {
   const result = await dbORM.getAll(File);
-  return result
+  const allIds = result.map(obj => obj.entityId)
+  return allIds
 };
 
 export const viewFile = async (id: string) => {
