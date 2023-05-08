@@ -8,11 +8,12 @@ export const choiceDeleteAddon = async () => {
     {
       name: "Addons",
       choices: allAddons,
-      type: "list",
+      type: "rawlist",
       message: "",
     },
   ]);
   const addon = await deleteAddon(choice.Addons);
+  console.log()
   console.log(addon);
   console.log()
 

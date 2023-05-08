@@ -6,7 +6,7 @@ export const choiceImportAddon = async () => {
   const choices = fs.readdirSync("import-directory");
   console.log(choices);
   let choice = await inquirer.prompt([
-    { name: "fileToRead", choices: choices, type: "list", message: "" },
+    { name: "fileToRead", choices: choices, type: "rawlist", message: "" },
   ]);
 
   try {

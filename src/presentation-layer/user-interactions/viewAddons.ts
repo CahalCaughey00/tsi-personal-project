@@ -8,11 +8,12 @@ export const viewAddons = async () => {
     {
       name: "Addons",
       choices: allAddons,
-      type: "list",
+      type: "rawlist",
       message: "",
     },
   ]);
   const addon = await viewAddon(choice.Addons);
+  console.log()
   console.log(addon);
   console.log()
 

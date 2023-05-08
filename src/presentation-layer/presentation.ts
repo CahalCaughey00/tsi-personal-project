@@ -18,11 +18,14 @@ export const presentation = async () => {
     "View Files",
     "Import a File",
     "Delete a File",
+    new inquirer.Separator(),
+    "Quit",
+    new inquirer.Separator()
   ];
   const menu = {
     name: "AddonDB",
     choices: options,
-    type: "list",
+    type: "rawlist",
     message: "",
   };
 
@@ -78,6 +81,8 @@ export const presentation = async () => {
         } else {
           break;
         }
+      case "Quit":
+        return;
       default:
         console.log("Something went horribly wrong!");
         break;

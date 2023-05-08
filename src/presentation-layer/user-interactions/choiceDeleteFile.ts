@@ -8,11 +8,12 @@ export const choiceDeleteFile = async () => {
     {
       name: "Files",
       choices: allFiles,
-      type: "list",
+      type: "rawlist",
       message: "",
     },
   ]);
   const file = await deleteFile(choice.Files);
+  console.log()
   console.log(file);
   console.log()
 
