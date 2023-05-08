@@ -1,3 +1,4 @@
+import { LOG_LEV } from "../index";
 import {
   viewAddons,
   choiceImportAddon,
@@ -6,6 +7,7 @@ import {
   choiceImportFile,
   choiceDeleteFile,
 } from "./user-interactions";
+import { LOG_LEVEL } from "../logger";
 
 export const presentation = async () => {
   const inquirer = (await import("inquirer")).default;
@@ -20,7 +22,7 @@ export const presentation = async () => {
     "Delete a File",
     new inquirer.Separator(),
     "Quit",
-    new inquirer.Separator()
+    new inquirer.Separator(),
   ];
   const menu = {
     name: "AddonDB",
@@ -35,7 +37,6 @@ export const presentation = async () => {
     switch (response["AddonDB"]) {
       case "View Addons":
         result = await viewAddons();
-        console.log(result);
         if (!result) {
           return;
         } else {
@@ -43,7 +44,6 @@ export const presentation = async () => {
         }
       case "Import an Addon":
         result = await choiceImportAddon();
-        console.log(result);
         if (!result) {
           return;
         } else {
@@ -51,7 +51,6 @@ export const presentation = async () => {
         }
       case "Delete an Addon":
         result = await choiceDeleteAddon();
-        console.log(result);
         if (!result) {
           return;
         } else {
@@ -59,7 +58,6 @@ export const presentation = async () => {
         }
       case "View Files":
         result = await viewFiles();
-        console.log(result);
         if (!result) {
           return;
         } else {
@@ -67,7 +65,6 @@ export const presentation = async () => {
         }
       case "Import a File":
         result = await choiceImportFile();
-        console.log(result);
         if (!result) {
           return;
         } else {
@@ -75,7 +72,6 @@ export const presentation = async () => {
         }
       case "Delete a File":
         result = await choiceDeleteFile();
-        console.log(result);
         if (!result) {
           return;
         } else {

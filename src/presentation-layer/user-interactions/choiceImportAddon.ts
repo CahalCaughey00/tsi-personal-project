@@ -1,19 +1,21 @@
 import { importAddon } from "../../application-layer/application";
 import fs from "fs";
+import { logError } from "../../logger";
 
 export const choiceImportAddon = async () => {
+  let choice;
   const inquirer = (await import("inquirer")).default;
-  const choices = fs.readdirSync("import-directory");
-  console.log(choices);
-  let choice = await inquirer.prompt([
-    { name: "fileToRead", choices: choices, type: "rawlist", message: "" },
-  ]);
 
   try {
-    const allAddons = await importAddon(choice["fileToRead"]);
-    console.log("File imported successfully");
+    const choices = fs.readdirSync("import-directory");
+    choice = await inquirer.prompt([
+      { name: "fileToRead", choices: choices, type: "rawlist", message: "" },
+    ]);
+    const importedAddon = await importAddon(choice["fileToRead"]);
+    console.log("File imported successfully: \n");
+    console.log(importedAddon);
   } catch (error) {
-    console.log("Something went horribly wrong!");
+    logError(error)
   }
 
   choice = await inquirer.prompt([
