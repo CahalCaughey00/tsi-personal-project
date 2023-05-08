@@ -1,15 +1,15 @@
 export enum LOG_LEVEL{
-  NONE = 0,
-  LIGHT = 1,
-  VERBOSE = 2
+  NONE = "NONE",
+  LIGHT = "LIGHT",
+  VERBOSE = "VERBOSE"
 }
 
 export const logError = (LOG_LEV, error) => {
-  switch (LOG_LEV.valueOf()) {
-    case LOG_LEVEL.LIGHT:
+  switch (LOG_LEV) {
+    case "LIGHT":
       console.log(error.message);
       break;
-    case LOG_LEVEL.VERBOSE:
+    case "VERBOSE":
       console.log(error);
       break;
     default:

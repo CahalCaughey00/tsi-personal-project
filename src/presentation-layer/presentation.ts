@@ -6,6 +6,7 @@ import {
   choiceImportFile,
   choiceDeleteFile,
 } from "./user-interactions";
+import { changeDebugLevel } from "./user-interactions/changeDebugLevel";
 
 export const presentation = async (context) => {
   const inquirer = (await import("inquirer")).default;
@@ -19,6 +20,7 @@ export const presentation = async (context) => {
     "Import a File",
     "Delete a File",
     new inquirer.Separator(),
+    "Debug Mode",
     "Quit",
     new inquirer.Separator(),
   ];
@@ -73,6 +75,14 @@ export const presentation = async (context) => {
         if (!result) {
           return;
         } else {
+          break;
+        }
+      case "Debug Mode":
+        result = await changeDebugLevel()
+        if (!result) {
+          return;
+        } else {
+          context.LOG_LEV = result
           break;
         }
       case "Quit":

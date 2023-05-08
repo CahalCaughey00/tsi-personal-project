@@ -8,7 +8,7 @@ interface Context {
 }
 
 export const context: Context= {
-  LOG_LEV: LOG_LEVEL.LIGHT,
+  LOG_LEV: LOG_LEVEL.NONE,
   logError: logError,
 };
 

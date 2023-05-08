@@ -6,6 +6,7 @@ export const choiceImportAddon = async (context) => {
   const inquirer = (await import("inquirer")).default;
 
   try {
+    console.log(context.LOG_LEV)
     const choices = fs.readdirSync("import-directory");
     choice = await inquirer.prompt([
       { name: "fileToRead", choices: choices, type: "rawlist", message: "" },
