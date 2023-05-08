@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "jest",
-    "setup": "ts-node src/initDatabase.ts",
+    "setup": "npm install && ts-node src/initDatabase.ts",
     "start": "ts-node src/index.ts"
   },
   "repository": {
