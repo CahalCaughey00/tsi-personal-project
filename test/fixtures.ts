@@ -70,7 +70,7 @@ export const allAddonsMock: DBAddon[] = [
     installedFile: 4143801,
     latestFile: 4143801,
     installedTargets: [],
-    status: 1
+    status: 5
   },
 ];
 
