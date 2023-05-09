@@ -39,3 +39,16 @@ To run all tests, from TSI-PERSONAL-PROJECT run:
   ```bash
   $ npm t
   ```
+
+## Submission Details
+---
+Class which performs data load can be found here: [AddonDB.ts](https://github.com/CahalCaughey00/tsi-personal-project/blob/main/src/data-layer/AddonDB.ts)
+
+Unit tests can be found in the following directories:
+- [test/data-layer](https://github.com/CahalCaughey00/tsi-personal-project/tree/main/test/data-layer) 
+- [test/application-layer](https://github.com/CahalCaughey00/tsi-personal-project/tree/main/test/application-layer)
+
+
+The file found at **test/data-layer/AddonDB.test.ts** contains various stubs and mocks, as well as a database fake which mimcs interaction through mocking/stubbing the required database methods and instead interacting with [pre-defined test-objects](https://github.com/CahalCaughey00/tsi-personal-project/blob/main/test/fixtures.ts)
+
+All other tests - excl. addonMapper.test.ts and fileMapper.test.ts (which dont require doubling) - utilise stubs, mocks, spys or a combination.

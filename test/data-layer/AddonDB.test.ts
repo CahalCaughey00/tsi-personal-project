@@ -9,16 +9,16 @@ import { IncomingAddon } from "../../src/incoming-entities/incomingAddon";
 import { DBAddon } from "../../src/data-layer/interfaces/Addon";
 import { IncomingFile } from "../../src/incoming-entities/incomingFile";
 import { DBModFile } from "../../src/data-layer/interfaces/File";
-// import { context } from "../../src/index"
-// import { addonMapper } from "../../src/data-layer/mappers/addonMapper";
-// import { fileMapper } from "../../src/data-layer/mappers/fileMapper";
+
 
 jest.mock("@mikro-orm/sqlite");
 
+
+// Various Jest functions which can be used as stubs/mocks as required
 const connectMock = jest.fn();
 const closeMock = jest.fn();
 
-const mockFindOne = jest.fn();
+const mockFindOne = jest.fn(); 
 const mockFind = jest.fn();
 
 const mockRemove = jest.fn();
@@ -26,10 +26,15 @@ const mockFlush = jest.fn();
 const mockPersist = jest.fn();
 const mockAssign = jest.fn();
 
+
+// Mocks out the context that allows the debugging strategy 
+// to be changed during runtime
 const mockContext = {LOG_LEV: 0, logError: jest.fn().mockImplementation(() => {
   throw new Error("Test Error")
 })}
 
+
+// Doubled entity manager to be used in mockOrm
 const mockEntityManager = {
   findOne: mockFindOne,
   find: mockFind,
@@ -39,6 +44,8 @@ const mockEntityManager = {
   assign: mockAssign,
 };
 
+
+// Doubled orm that fakes interaction with the database
 const mockOrm = {
   em: {
     fork: () => mockEntityManager,
@@ -46,6 +53,7 @@ const mockOrm = {
   connect: connectMock,
   close: closeMock,
 } as unknown as MikroORM<SqliteDriver>;
+
 
 describe("GIVEN an AddonDB instance", () => {
   beforeEach(() => {
@@ -56,7 +64,7 @@ describe("GIVEN an AddonDB instance", () => {
 
   describe("WHEN calling the init function", () => {
     test("THEN the orm property is initialised", async () => {
-      const initSpy = jest.spyOn(initOrm, "initOrm");
+      const initSpy = jest.spyOn(initOrm, "initOrm"); //Overrides orm initialisation and returns mocked version (must be executed each test to stay in scope)
       initSpy.mockResolvedValue(mockOrm);
 
       await addonDB.init(mockContext);
@@ -263,10 +271,6 @@ describe("GIVEN an AddonDB instance", () => {
       initSpy.mockResolvedValue(mockOrm);
       getbyIdSpy.mockResolvedValue(undefined);
 
-      // TODO: Try and get mocking for mappers to work
-      // const fileMapperMock = *********
-      // fileMapperMock.mockReturnValue(mockMappedFile);
-
       await addonDB.init(mockContext);
       await addonDB.writeEntity(File, mockIncomingFile, mockContext);
 
@@ -295,10 +299,6 @@ describe("GIVEN an AddonDB instance", () => {
 
       initSpy.mockResolvedValue(mockOrm);
       getbyIdSpy.mockResolvedValue({} as DBAddon);
-
-      // TODO: Try and get mocking for mappers to work
-      // const addonMapperMock = *********
-      // addonMapperMock.mockReturnValue(mockMappedAddon);
 
       await addonDB.init(mockContext);
       await addonDB.writeEntity(Addon, mockIncomingAddon, mockContext);
