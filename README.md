@@ -17,7 +17,7 @@ This application allows for interaction with an in-memory SQLite3 database stori
 1. Download NodeJS installer: [download page here](https://nodejs.org/en/download)
 2. Run the  NodeJS installer, ensuring the following option ***IS TICKED***: 
 
-    ![](example-files/screenshot.png)
+    ![](import-directory/screenshot.png)
 
     Leave all other settings as they appear
 3. If you have not already, make sure to open the repository in the `TSI-PERSONAL-PROJECT` directory in VS Code. Failing to do so can lead to clashes with other testing libraries that you may have installed.
